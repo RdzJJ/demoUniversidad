@@ -35,7 +35,8 @@ namespace demoUniversidad
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            VerCursos verCursos = new VerCursos();
+            verCursos.Show();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -8,6 +8,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace demoUniversidad
 {
@@ -53,9 +54,22 @@ namespace demoUniversidad
                 DialogResult result = MessageBox.Show("¿Estas seguro(a) de que quieres matricular los siguientes cursos?:\n" + elementosComoCadena, "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("¡Tu matrícula ha sido exitosa!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    listaDeCursos.Add(elementosComoCadena);
-                    this.Close();
+                    StreamReader lector;
+                    lector = File.OpenText(@"C:\Users\JULIAN\source\repos\demoUniversidad\Datos\matriculadas.txt");
+                    if (lector == null)
+                    {
+                        MessageBox.Show("Prueba");
+                    }
+                    else
+                    {
+                        lector.Close();
+                        MessageBox.Show("¡Tu matrícula ha sido exitosa!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        StreamWriter sw = new StreamWriter(@"C:\Users\JULIAN\source\repos\demoUniversidad\Datos\matriculadas.txt", true);
+                        sw.WriteLine(elementosComoCadena);
+                        sw.Close();
+
+                    }
+                    lector.Close();
                 }
             }
         }

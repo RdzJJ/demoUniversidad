@@ -76,7 +76,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "000334- Paradigmas de Programación", "000345- Arquitectura de Computadores", "003456- Bases de Datos" });
+            comboBox1.Items.AddRange(new object[] { "002334 - Paradigmas de Programación", "001345 - Arquitectura de Computadores", "003456 - Bases de Datos", "009071 - Humanismo y Cultura", "003194 - Futbol e historia", "001925 - Ofimatica", "008435 - Matematicas Operativas", "005935 - Mantenimiento de Computadores" });
             comboBox1.Location = new Point(257, 99);
             comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
