@@ -124,11 +124,12 @@
             // 
             lblsaludo.AutoSize = true;
             lblsaludo.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblsaludo.Location = new Point(101, 71);
+            lblsaludo.Location = new Point(79, 72);
             lblsaludo.Name = "lblsaludo";
             lblsaludo.Size = new Size(20, 18);
             lblsaludo.TabIndex = 7;
             lblsaludo.Text = "...";
+            lblsaludo.Click += lblsaludo_Click;
             // 
             // Menu
             // 
@@ -146,7 +147,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Menu";
-            Text = "Menu";
+            Text = "Menu(Estudiante)";
             ResumeLayout(false);
             PerformLayout();
         }

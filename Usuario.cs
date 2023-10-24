@@ -36,14 +36,15 @@ namespace demoUniversidad
 
         public static bool validarUsuario(string usuario, string contraseña)
         {
-            List<Usuario> list = mostrar();
+            List<Usuario> list = userList.mostrar();
             for (int i = 0; i < list.Count; i++)
             {
-                Usuario user = list[i]; 
-                if(user.usuario.Equals(usuario) && user.contraseña.Equals(contraseña))
+                Usuario user = list[i];
+                if (user.usuario.Equals(usuario) && user.contraseña.Equals(contraseña))
                 {
                     return true;
-                } else
+                }
+                else
                 {
                     return false;
                 }
@@ -51,10 +52,21 @@ namespace demoUniversidad
             return false;
         }
 
-        public static List<Usuario> mostrar()
+        public static string Bienvenido(string user)
         {
-            return userList.mostrar();
+            List<Usuario> list = userList.mostrar();
+            string saludo = "";
+            string nombre = "";
+            for (int i = 0; i < list.Count; i++)
+            {
+                Usuario obj = list[i];
+                if (obj.usuario.Equals(user))
+                {
+                    nombre = obj.Nombre;
+                }
+            }
+            saludo = "¡Bienvenido, " + nombre + "!\n¿Qué deseas hacer hoy?";
+            return saludo;
         }
-
     }
 }

@@ -16,8 +16,10 @@ namespace demoUniversidad
             string contraseñalog = passText.Text;
             if (Usuario.validarUsuario(usuarioLog, contraseñalog))
             {
+                
                 MessageBox.Show("¡Bienvenido!", "Validación exitosa", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 Menu menuPrincipal = new Menu();
+                menuPrincipal.setSaludo(Usuario.Bienvenido(usuarioLog));
                 menuPrincipal.Show();
                 userText.Clear();
                 passText.Clear();
