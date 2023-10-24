@@ -117,7 +117,7 @@
             // 
             horaMa.AutoSize = true;
             horaMa.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            horaMa.Location = new Point(631, 309);
+            horaMa.Location = new Point(613, 309);
             horaMa.Name = "horaMa";
             horaMa.Size = new Size(34, 16);
             horaMa.TabIndex = 7;

@@ -27,11 +27,12 @@ namespace demoUniversidad
             try
             {
                 listView1.Items.Add(comboBox1.SelectedItem.ToString());
-            } catch
+            }
+            catch
             {
                 MessageBox.Show("No seleccionaste ningún curso.");
             }
-            
+
         }
 
         private void matricular_Click(object sender, EventArgs e)

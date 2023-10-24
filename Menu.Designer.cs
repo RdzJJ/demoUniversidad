@@ -37,6 +37,7 @@
             linkLabel3 = new LinkLabel();
             horaMenu = new System.Windows.Forms.Timer(components);
             lblHoraMenu = new Label();
+            BienvenidoLbl = new Label();
             SuspendLayout();
             // 
             // label1
@@ -119,11 +120,22 @@
             lblHoraMenu.Text = "Hora";
             lblHoraMenu.Click += lblHoraMenu_Click;
             // 
+            // BienvenidoLbl
+            // 
+            BienvenidoLbl.AutoSize = true;
+            BienvenidoLbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BienvenidoLbl.Location = new Point(151, 64);
+            BienvenidoLbl.Name = "BienvenidoLbl";
+            BienvenidoLbl.Size = new Size(84, 18);
+            BienvenidoLbl.TabIndex = 7;
+            BienvenidoLbl.Text = "bienvenido";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(682, 295);
+            Controls.Add(BienvenidoLbl);
             Controls.Add(lblHoraMenu);
             Controls.Add(linkLabel3);
             Controls.Add(cerrarSesion);
@@ -149,5 +161,6 @@
         private LinkLabel linkLabel3;
         private System.Windows.Forms.Timer horaMenu;
         private Label lblHoraMenu;
+        private Label BienvenidoLbl;
     }
 }

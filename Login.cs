@@ -14,27 +14,20 @@ namespace demoUniversidad
         {
             string usuarioLog = userText.Text;
             string contraseñalog = passText.Text;
-            Validacion(usuarioLog, contraseñalog);
-
-        }
-        public bool Validacion(string usuario, string contraseña)
-        {
-            if (usuario.Equals("admin") && contraseña.Equals("123"))
+            if (Usuario.validarUsuario(usuarioLog, contraseñalog))
             {
-                MessageBox.Show("Bienvenido");
+                MessageBox.Show("¡Bienvenido!");
                 Menu menuPrincipal = new Menu();
                 menuPrincipal.Show();
                 userText.Clear();
                 passText.Clear();
-                return true;
-
+                
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos ");
+                MessageBox.Show("Usuario o contraseña incorrecto.");
                 userText.Clear();
                 passText.Clear();
-                return false;
             }
 
         }

@@ -10,7 +10,7 @@ namespace demoUniversidad
     public class userList
     {
         public static List<Usuario> users = new List<Usuario>();
-        public void agregar(Usuario user)
+        public static void agregar(Usuario user)
         {
             users.Add(user);
         }

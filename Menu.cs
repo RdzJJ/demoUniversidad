@@ -40,7 +40,7 @@ namespace demoUniversidad
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
         }
         private void horaMenu_Tick(object sender, EventArgs e)
         {
@@ -50,6 +50,11 @@ namespace demoUniversidad
         private void lblHoraMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void setNombre(string nombre)
+        {
+            BienvenidoLbl.Text = "¡Bienvenido, " + nombre + "!\n¿Qué deseas hacer hoy?";
         }
     }
 }
