@@ -37,14 +37,14 @@
             linkLabel3 = new LinkLabel();
             horaMenu = new System.Windows.Forms.Timer(components);
             lblHoraMenu = new Label();
-            BienvenidoLbl = new Label();
+            lblsaludo = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(65, 92);
+            label1.Location = new Point(74, 125);
             label1.Name = "label1";
             label1.Size = new Size(122, 19);
             label1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(70, 125);
+            linkLabel1.Location = new Point(79, 158);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(100, 15);
             linkLabel1.TabIndex = 2;
@@ -74,7 +74,7 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(70, 160);
+            linkLabel2.Location = new Point(79, 193);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(134, 15);
             linkLabel2.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // cerrarSesion
             // 
-            cerrarSesion.Location = new Point(514, 248);
+            cerrarSesion.Location = new Point(557, 302);
             cerrarSesion.Margin = new Padding(3, 2, 3, 2);
             cerrarSesion.Name = "cerrarSesion";
             cerrarSesion.Size = new Size(113, 28);
@@ -96,7 +96,7 @@
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(70, 194);
+            linkLabel3.Location = new Point(79, 227);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(150, 15);
             linkLabel3.TabIndex = 5;
@@ -113,29 +113,29 @@
             // 
             lblHoraMenu.AutoSize = true;
             lblHoraMenu.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHoraMenu.Location = new Point(65, 259);
+            lblHoraMenu.Location = new Point(12, 314);
             lblHoraMenu.Name = "lblHoraMenu";
             lblHoraMenu.Size = new Size(34, 16);
             lblHoraMenu.TabIndex = 6;
             lblHoraMenu.Text = "Hora";
             lblHoraMenu.Click += lblHoraMenu_Click;
             // 
-            // BienvenidoLbl
+            // lblsaludo
             // 
-            BienvenidoLbl.AutoSize = true;
-            BienvenidoLbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BienvenidoLbl.Location = new Point(151, 64);
-            BienvenidoLbl.Name = "BienvenidoLbl";
-            BienvenidoLbl.Size = new Size(84, 18);
-            BienvenidoLbl.TabIndex = 7;
-            BienvenidoLbl.Text = "bienvenido";
+            lblsaludo.AutoSize = true;
+            lblsaludo.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblsaludo.Location = new Point(101, 71);
+            lblsaludo.Name = "lblsaludo";
+            lblsaludo.Size = new Size(20, 18);
+            lblsaludo.TabIndex = 7;
+            lblsaludo.Text = "...";
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 295);
-            Controls.Add(BienvenidoLbl);
+            ClientSize = new Size(713, 341);
+            Controls.Add(lblsaludo);
             Controls.Add(lblHoraMenu);
             Controls.Add(linkLabel3);
             Controls.Add(cerrarSesion);
@@ -161,6 +161,6 @@
         private LinkLabel linkLabel3;
         private System.Windows.Forms.Timer horaMenu;
         private Label lblHoraMenu;
-        private Label BienvenidoLbl;
+        private Label lblsaludo;
     }
 }

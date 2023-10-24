@@ -30,7 +30,7 @@ namespace demoUniversidad
             }
             catch
             {
-                MessageBox.Show("No seleccionaste ningún curso.");
+                MessageBox.Show("No seleccionaste ningún curso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -42,16 +42,23 @@ namespace demoUniversidad
             {
                 listaDeCursos.Add(item.Text);
             }
-            string elementosComoCadena = string.Join(Environment.NewLine, listaDeCursos);
-            DialogResult result = MessageBox.Show("estas seguro de que quieres matricular los siguientes cursos:\n" + elementosComoCadena, "confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+
+            if (listaDeCursos.Count == 0)
             {
-                MessageBox.Show("tu matrícula ha sido exitosa! ");
-                listaDeCursos.Add(elementosComoCadena);
-                this.Close();
+                MessageBox.Show("Recuerda seleccionar las materias y darle al botón Agregar", "No matriculaste ninguna materia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string elementosComoCadena = string.Join(Environment.NewLine, listaDeCursos);
+                DialogResult result = MessageBox.Show("¿Estas seguro(a) de que quieres matricular los siguientes cursos?:\n" + elementosComoCadena, "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("¡Tu matrícula ha sido exitosa!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listaDeCursos.Add(elementosComoCadena);
+                    this.Close();
+                }
             }
         }
-
         private void eliminar_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listView1.SelectedItems)

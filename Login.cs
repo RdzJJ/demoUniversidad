@@ -16,7 +16,7 @@ namespace demoUniversidad
             string contraseñalog = passText.Text;
             if (Usuario.validarUsuario(usuarioLog, contraseñalog))
             {
-                MessageBox.Show("¡Bienvenido!");
+                MessageBox.Show("¡Bienvenido!", "Validación exitosa", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 Menu menuPrincipal = new Menu();
                 menuPrincipal.Show();
                 userText.Clear();
@@ -25,7 +25,7 @@ namespace demoUniversidad
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecto.");
+                MessageBox.Show("Usuario o contraseña incorrecto.", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 userText.Clear();
                 passText.Clear();
             }

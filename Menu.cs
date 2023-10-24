@@ -16,6 +16,8 @@ namespace demoUniversidad
         {
             InitializeComponent();
             this.CenterToScreen();
+
+            lblsaludo.Text = Bienvenido();
         }
 
         private void cerrarSesion_Click(object sender, EventArgs e)
@@ -52,9 +54,10 @@ namespace demoUniversidad
 
         }
 
-        public void setNombre(string nombre)
+        private string Bienvenido()
         {
-            BienvenidoLbl.Text = "¡Bienvenido, " + nombre + "!\n¿Qué deseas hacer hoy?";
+            string saludo = "Cambiar";
+            return saludo;
         }
     }
 }

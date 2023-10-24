@@ -65,10 +65,10 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(145, 154);
+            listView1.Location = new Point(145, 143);
             listView1.Margin = new Padding(3, 2, 3, 2);
             listView1.Name = "listView1";
-            listView1.Size = new Size(384, 92);
+            listView1.Size = new Size(384, 103);
             listView1.TabIndex = 3;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
@@ -80,7 +80,7 @@
             comboBox1.Location = new Point(257, 99);
             comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
+            comboBox1.Size = new Size(272, 23);
             comboBox1.TabIndex = 4;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
