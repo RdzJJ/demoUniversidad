@@ -102,7 +102,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.InactiveBorder;
-            pictureBox1.Image = Properties.Resources._456212;
+            pictureBox1.Image = Properties.Resources.b192c70d750d0700becf81b1ccc9e2a6__1_;
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(37, 30);
@@ -140,6 +140,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(806, 87);
             panel2.TabIndex = 8;
+            panel2.Paint += panel2_Paint;
             // 
             // Menu_Administrador_
             // 

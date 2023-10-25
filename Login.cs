@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace demoUniversidad
 {
@@ -8,19 +9,19 @@ namespace demoUniversidad
         {
             InitializeComponent();
             this.CenterToScreen();
+            estado = -1;
         }
 
+        public static int estado;
         private void IngresarBtn_Click(object sender, EventArgs e)
         {
             string usuarioLog = userText.Text;
             string contraseñalog = passText.Text;
             if (Usuario.validarUsuario(usuarioLog, contraseñalog))
             {
-
                 MessageBox.Show("¡Bienvenido!", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int rol;
-                rol = Usuario.verificarRol();
-                switch (rol)
+                Usuario.verificarRol();
+                switch (estado)
                 {
                     case 0:
                         Menu_Administrador_ menuAdmin = new Menu_Administrador_();
@@ -29,11 +30,14 @@ namespace demoUniversidad
                         break;
                     case 1:
                         MessageBox.Show("¡Se ejecuta magicamente el menu de profe", "No encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        estado = -1;
                         break;
+
                     case 2:
                         Menu menuPrincipal = new Menu();
                         menuPrincipal.setSaludo(Usuario.Bienvenido(usuarioLog));
                         menuPrincipal.Show();
+                        estado = -1;
                         break;
                     default:
                         MessageBox.Show("Usuario sin rol asignado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

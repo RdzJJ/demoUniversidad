@@ -49,7 +49,7 @@ namespace demoUniversidad
             }
             return validar;
         }
-        public static int verificarRol()
+        public static void verificarRol()
         {
             List<Usuario> list = userList.mostrar();
             int rol = -1;
@@ -69,7 +69,7 @@ namespace demoUniversidad
                     rol = 2;
                 }
             }
-            return rol; // Corregir
+            Login.estado = rol;
         }
 
         public static string Bienvenido(string user)

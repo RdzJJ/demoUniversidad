@@ -151,7 +151,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources._456212;
+            pictureBox1.Image = Properties.Resources._229594622_4252981131436960_3360945037460184968_n;
             pictureBox1.Location = new Point(47, 73);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(101, 101);

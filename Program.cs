@@ -8,7 +8,7 @@ namespace demoUniversidad
         [STAThread]
         static void Main()
         {
-            Usuario admin = new Usuario("Dario Gomez", "admin", "123", 0001, 0);
+            Usuario admin = new Usuario("Julian Rodriguez", "admin", "123", 0001, 0);
             userList.agregar(admin);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

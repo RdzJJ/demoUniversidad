@@ -63,6 +63,16 @@ namespace demoUniversidad.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _229594622_4252981131436960_3360945037460184968_n {
+            get {
+                object obj = ResourceManager.GetObject("229594622_4252981131436960_3360945037460184968_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _456212 {
             get {
                 object obj = ResourceManager.GetObject("456212", resourceCulture);
@@ -76,6 +86,16 @@ namespace demoUniversidad.Properties {
         internal static System.Drawing.Bitmap _4562121 {
             get {
                 object obj = ResourceManager.GetObject("4562121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b192c70d750d0700becf81b1ccc9e2a6__1_ {
+            get {
+                object obj = ResourceManager.GetObject("b192c70d750d0700becf81b1ccc9e2a6 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
