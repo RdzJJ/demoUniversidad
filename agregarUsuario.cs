@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace demoUniversidad
 {
-    public partial class UserControl1 : UserControl
+    public partial class agregarUsuario : Form
     {
-        public UserControl1()
+        public agregarUsuario()
         {
             InitializeComponent();
         }

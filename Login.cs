@@ -16,14 +16,31 @@ namespace demoUniversidad
             string contraseñalog = passText.Text;
             if (Usuario.validarUsuario(usuarioLog, contraseñalog))
             {
-                
-                MessageBox.Show("¡Bienvenido!", "Validación exitosa", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                Menu menuPrincipal = new Menu();
-                menuPrincipal.setSaludo(Usuario.Bienvenido(usuarioLog));
-                menuPrincipal.Show();
+
+                MessageBox.Show("¡Bienvenido!", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(Usuario.verificarRol() == 0)
+                {
+                    Menu_Administrador_ menuAdmin = new Menu_Administrador_();
+                    menuAdmin.setSaludo(Usuario.Bienvenido(usuarioLog));
+                    menuAdmin.Show();
+
+                } else if (Usuario.verificarRol() == 1)
+                {
+                    MessageBox.Show("¡Se ejecuta magicamente el menu de profe","No encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (Usuario.verificarRol()==2)
+                {
+                    Menu menuPrincipal = new Menu();
+                    menuPrincipal.setSaludo(Usuario.Bienvenido(usuarioLog));
+                    menuPrincipal.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario sin rol asignado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 userText.Clear();
                 passText.Clear();
-                
+
             }
             else
             {

@@ -148,7 +148,7 @@
             Controls.Add(listView1);
             Controls.Add(agregar);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MatricularCursos";
             Text = "MatricularCursos";

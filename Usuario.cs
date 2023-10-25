@@ -51,11 +51,31 @@ namespace demoUniversidad
             }
             return false;
         }
+        public static int verificarRol()
+        {
+            List<Usuario> list = userList.mostrar();
+            for (int i = 0; i < list.Count; i++)
+            {
+                Usuario user = list[i];
+                if (user.rol.Equals(0))
+                {
+                    return 0;
+                }
+                else if (user.rol.Equals(1))
+                {
+                    return 1;
+                }
+                else if (user.rol.Equals(2))
+                {
+                    return 2;
+                }
+            }
+            return -1;
+        }
 
         public static string Bienvenido(string user)
         {
             List<Usuario> list = userList.mostrar();
-            string saludo = "";
             string nombre = "";
             for (int i = 0; i < list.Count; i++)
             {
@@ -65,8 +85,7 @@ namespace demoUniversidad
                     nombre = obj.Nombre;
                 }
             }
-            saludo = "¡Bienvenido, " + nombre + "!\n¿Qué deseas hacer hoy?";
-            return saludo;
+            return nombre;
         }
     }
 }

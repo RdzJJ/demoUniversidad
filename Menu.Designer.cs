@@ -112,10 +112,10 @@
             // lblHoraMenu
             // 
             lblHoraMenu.AutoSize = true;
-            lblHoraMenu.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHoraMenu.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblHoraMenu.Location = new Point(12, 314);
             lblHoraMenu.Name = "lblHoraMenu";
-            lblHoraMenu.Size = new Size(34, 16);
+            lblHoraMenu.Size = new Size(37, 16);
             lblHoraMenu.TabIndex = 6;
             lblHoraMenu.Text = "Hora";
             lblHoraMenu.Click += lblHoraMenu_Click;
