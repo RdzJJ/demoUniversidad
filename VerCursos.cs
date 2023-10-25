@@ -23,6 +23,7 @@ namespace demoUniversidad
         }
         private void actualizar_Click(object sender, EventArgs e)
         {
+            verCursosListView.Items.Clear();
             StreamReader lector;
 
             lector = File.OpenText("C:\\Users\\JULIAN\\source\\repos\\demoUniversidad\\Datos\\matriculadas.txt");
@@ -46,6 +47,11 @@ namespace demoUniversidad
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblhoraCursos.Text = DateTime.Now.ToString("hh: mm:ss tt");
+        }
+
+        private void VerCursos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

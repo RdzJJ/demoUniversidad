@@ -59,7 +59,18 @@ namespace demoUniversidad
         }
         public void setSaludo(string nombre)
         {
-            lblsaludo.Text = nombre;
+            string[] split = nombre.Split(' ');
+            lblsaludo.Text = "¡Bienvenido, " + split[0] + "!\n¿Qué deseas hacer hoy?";
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

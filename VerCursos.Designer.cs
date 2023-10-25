@@ -74,9 +74,9 @@
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(187, 39);
             label1.Name = "label1";
-            label1.Size = new Size(443, 29);
+            label1.Size = new Size(434, 29);
             label1.TabIndex = 3;
-            label1.Text = "¡Aquí están tus cursos matriculados!*";
+            label1.Text = "¡Aquí están tus cursos matriculados!\r\n";
             label1.Click += label1_Click;
             // 
             // lblhoraCursos
@@ -104,9 +104,10 @@
             Controls.Add(actualizar);
             Controls.Add(gobackBtn);
             Controls.Add(verCursosListView);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "VerCursos";
             Text = "Cursos";
+            Load += VerCursos_Load;
             ResumeLayout(false);
             PerformLayout();
         }

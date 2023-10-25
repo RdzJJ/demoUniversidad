@@ -99,10 +99,10 @@
             // eliminar
             // 
             eliminar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            eliminar.Location = new Point(408, 254);
+            eliminar.Location = new Point(408, 250);
             eliminar.Margin = new Padding(3, 2, 3, 2);
             eliminar.Name = "eliminar";
-            eliminar.Size = new Size(121, 22);
+            eliminar.Size = new Size(121, 26);
             eliminar.TabIndex = 6;
             eliminar.Text = "Eliminar Cursos";
             eliminar.UseVisualStyleBackColor = true;

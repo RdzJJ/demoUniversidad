@@ -33,7 +33,23 @@ namespace demoUniversidad
 
         private void agregarUserBtn_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+            agregarUsuario agregar = new agregarUsuario();
+            agregar.setName(Usuario.Bienvenido(Name));
+            agregar.Show();
+        }
+
+        private void adminNameLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

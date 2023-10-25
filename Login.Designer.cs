@@ -40,6 +40,7 @@
             lblhora = new Label();
             buttonSalir = new Button();
             pictureBox1 = new PictureBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             userText.Name = "userText";
             userText.Size = new Size(132, 23);
             userText.TabIndex = 1;
+            userText.TextChanged += userText_TextChanged;
             // 
             // passText
             // 
@@ -75,8 +77,9 @@
             // loginLb
             // 
             loginLb.AutoSize = true;
+            loginLb.BackColor = SystemColors.GradientActiveCaption;
             loginLb.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            loginLb.Location = new Point(16, 48);
+            loginLb.Location = new Point(12, 33);
             loginLb.Name = "loginLb";
             loginLb.Size = new Size(672, 32);
             loginLb.TabIndex = 3;
@@ -142,13 +145,21 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLight;
-            pictureBox1.Image = Properties.Resources._4562121;
+            pictureBox1.Image = Properties.Resources._456212;
             pictureBox1.Location = new Point(55, 101);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(241, 220);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientActiveCaption;
+            panel1.Location = new Point(-6, 23);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(703, 58);
+            panel1.TabIndex = 11;
             // 
             // Login
             // 
@@ -166,10 +177,12 @@
             Controls.Add(passText);
             Controls.Add(userText);
             Controls.Add(IngresarBtn);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -188,5 +201,6 @@
         private Label lblhora;
         private Button buttonSalir;
         private PictureBox pictureBox1;
+        private Panel panel1;
     }
 }

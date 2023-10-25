@@ -36,41 +36,40 @@ namespace demoUniversidad
 
         public static bool validarUsuario(string usuario, string contraseña)
         {
+            bool validar = false;
             List<Usuario> list = userList.mostrar();
             for (int i = 0; i < list.Count; i++)
             {
                 Usuario user = list[i];
                 if (user.usuario.Equals(usuario) && user.contraseña.Equals(contraseña))
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    validar = true;
+                    break;
                 }
             }
-            return false;
+            return validar;
         }
         public static int verificarRol()
         {
             List<Usuario> list = userList.mostrar();
+            int rol = -1;
             for (int i = 0; i < list.Count; i++)
             {
                 Usuario user = list[i];
                 if (user.rol.Equals(0))
                 {
-                    return 0;
+                    rol = 0;
                 }
                 else if (user.rol.Equals(1))
                 {
-                    return 1;
+                    rol = 1;
                 }
                 else if (user.rol.Equals(2))
                 {
-                    return 2;
+                    rol = 2;
                 }
             }
-            return -1;
+            return rol; // Corregir
         }
 
         public static string Bienvenido(string user)

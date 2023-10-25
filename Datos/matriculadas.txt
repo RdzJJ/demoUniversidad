@@ -1,5 +1,3 @@
+002334 - Paradigmas de Programación
+001925 - Ofimatica
 001345 - Arquitectura de Computadores
-002334 - Paradigmas de Programación
-003194 - Futbol e historia
-002334 - Paradigmas de Programación
-008435 - Matematicas Operativas
